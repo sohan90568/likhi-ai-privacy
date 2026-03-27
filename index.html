@@ -1,13 +1,415 @@
 <!DOCTYPE html>
 <html lang="bn">
-<head><meta charset="UTF-8"><title>লিখি AI Privacy Policy</title></head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>গোপনীয়তা নীতি - লিখি AI কীবোর্ড</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+        
+        .header .version {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+        
+        .language-tabs {
+            display: flex;
+            background: #f5f5f5;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .lang-btn {
+            flex: 1;
+            padding: 12px;
+            background: none;
+            border: none;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            color: #666;
+        }
+        
+        .lang-btn.active {
+            background: white;
+            color: #667eea;
+            border-bottom: 3px solid #667eea;
+        }
+        
+        .lang-btn:hover:not(.active) {
+            background: #e8e8e8;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        .lang-content {
+            display: none;
+        }
+        
+        .lang-content.active {
+            display: block;
+        }
+        
+        h2 {
+            color: #333;
+            font-size: 22px;
+            margin-top: 25px;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #667eea;
+        }
+        
+        h3 {
+            color: #555;
+            font-size: 18px;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        
+        p {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        
+        ul, ol {
+            margin: 15px 0 15px 25px;
+            color: #666;
+            line-height: 1.6;
+        }
+        
+        li {
+            margin: 8px 0;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        
+        th {
+            background: #667eea;
+            color: white;
+        }
+        
+        td {
+            background: #f9f9f9;
+        }
+        
+        .contact-box {
+            background: #f0f4ff;
+            padding: 20px;
+            border-radius: 12px;
+            margin: 20px 0;
+            border-left: 4px solid #667eea;
+        }
+        
+        .contact-box p {
+            margin: 5px 0;
+        }
+        
+        .contact-box strong {
+            color: #667eea;
+        }
+        
+        .footer {
+            background: #f5f5f5;
+            padding: 20px;
+            text-align: center;
+            color: #888;
+            font-size: 14px;
+            border-top: 1px solid #ddd;
+        }
+        
+        .badge {
+            display: inline-block;
+            background: #e8f5e9;
+            color: #2e7d32;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            margin-right: 10px;
+        }
+        
+        @media (max-width: 600px) {
+            .content {
+                padding: 20px;
+            }
+            h2 {
+                font-size: 18px;
+            }
+            table {
+                font-size: 12px;
+            }
+            th, td {
+                padding: 8px;
+            }
+        }
+    </style>
+</head>
 <body>
-<h1>লিখি AI — Privacy Policy</h1>
-<p>লিখি AI আপনার কোনো টাইপিং ডেটা সংগ্রহ বা সংরক্ষণ করে না।</p>
-<p>AI ফিচার ব্যবহারের সময় শুধুমাত্র আপনার সিলেক্ট করা টেক্সট
- সার্ভারে প্রেরণ করা হয় এবং সংরক্ষণ করা হয় না।</p>
-<p>লিখি AI does not collect, store, or share any typed content.</p>
-<p>Contact: sohan90568@gmail.com</p>
- <p>Website: https://mindcrafttechnologies.netlify.app </p>
+    <div class="container">
+        <div class="header">
+            <h1>📱 লিখি AI কীবোর্ড</h1>
+            <p>গোপনীয়তা নীতি</p>
+            <div class="version">শেষ হালনাগাদ: ২৭ মার্চ, ২০২৬ | Last Updated: March 27, 2026</div>
+        </div>
+        
+        <div class="language-tabs">
+            <button class="lang-btn active" onclick="showLanguage('bn')">🇧🇩 বাংলা</button>
+            <button class="lang-btn" onclick="showLanguage('en')">🇬🇧 English</button>
+        </div>
+        
+        <!-- বাংলা কন্টেন্ট -->
+        <div id="lang-bn" class="lang-content active">
+            <div class="content">
+                <p><span class="badge">📌 গুরুত্বপূর্ণ</span> লিখি AI কীবোর্ড আপনার গোপনীয়তাকে সম্মান করে। আমরা আপনার ডেটা সুরক্ষিত রাখতে প্রতিশ্রুতিবদ্ধ।</p>
+                
+                <h2>১. ডেটা সংগ্রহ</h2>
+                <p>আমাদের অ্যাপ নিম্নলিখিত ডেটা সংগ্রহ করে:</p>
+                
+                <h3>📝 ক. টাইপিং ডেটা (মেসেজ)</h3>
+                <p>আপনি যখন টাইপ করেন, আপনার লেখা টেক্সট আমাদের AI সার্ভারে প্রক্রিয়াকরণের জন্য পাঠানো হয় নিচের ফিচারগুলোর জন্য:</p>
+                <ul>
+                    <li><strong>অনুবাদ</strong> — বাংলা ↔ ইংরেজি তাৎক্ষণিক অনুবাদ</li>
+                    <li><strong>ঠিক করুন</strong> — বানান ও ব্যাকরণ সংশোধন</li>
+                    <li><strong>আনুষ্ঠানিক</strong> — casual থেকে formal ভাষায় রূপান্তর</li>
+                    <li><strong>সংক্ষিপ্ত</strong> — লম্বা লেখা ছোট করুন</li>
+                    <li><strong>বড় করুন</strong> — ছোট বাক্য বিস্তারিত করুন</li>
+                    <li><strong>প্রবাদ</strong> — প্রাসঙ্গিক বাংলা প্রবাদ ও উদ্ধৃতি</li>
+                    <li><strong>Smart Reply</strong> — ৩টি উত্তর তৈরি করুন</li>
+                    <li><strong>Caption</strong> — ক্যাপশন তৈরি করুন</li>
+                </ul>
+                <p>এই ডেটা <strong>Groq API</strong>-তে পাঠানো হয় AI প্রক্রিয়াকরণের জন্য। টেক্সট স্থায়ীভাবে সংরক্ষণ করা হয় না।</p>
+                
+                <h3>🎤 খ. ভয়েস ইনপুট (ঐচ্ছিক)</h3>
+                <p>আপনি যদি ভয়েস টাইপিং ব্যবহার করেন, আপনার ভয়েস রেকর্ডিং স্পিচ-টু-টেক্সট সার্ভিসে পাঠানো হয়। অডিও প্রক্রিয়াকরণের পর সাথে সাথেই মুছে ফেলা হয়।</p>
+                
+                <h3>📊 গ. অ্যাপ কার্যকলাপ ও বিশ্লেষণ</h3>
+                <p>আমরা <strong>Firebase Analytics</strong> ব্যবহার করি:</p>
+                <ul>
+                    <li>অ্যাপ ব্যবহারের পরিসংখ্যান</li>
+                    <li>ফিচার ব্যবহারের ধরণ</li>
+                    <li>ক্র্যাশ রিপোর্ট</li>
+                    <li>ডিভাইস তথ্য (Android ID, Advertising ID)</li>
+                </ul>
+                
+                <h3>💰 ঘ. কেনাকাটার তথ্য</h3>
+                <p>আপনি যদি AI Pro সাবস্ক্রিপশন বা AI ক্রেডিট কিনেন, আমরা আপনার কেনাকাটার ইতিহাস সংগ্রহ করি:</p>
+                <ul>
+                    <li>সাবস্ক্রিপশনের ধরন (মাসিক/বার্ষিক)</li>
+                    <li>AI ক্রেডিট ব্যালেন্স</li>
+                    <li>সাবস্ক্রিপশনের মেয়াদ</li>
+                </ul>
+                <p><strong>গুরুত্বপূর্ণ:</strong> পেমেন্ট প্রক্রিয়াকরণ সম্পূর্ণভাবে Google Play দ্বারা পরিচালিত হয়। আমরা আপনার ক্রেডিট কার্ড বা ব্যাংকের তথ্য সংগ্রহ করি না।</p>
+                
+                <h2>২. তৃতীয় পক্ষের সাথে ডেটা শেয়ার</h2>
+                <p>আমরা নিম্নলিখিত তৃতীয় পক্ষের সার্ভিসের সাথে ডেটা শেয়ার করি:</p>
+                
+                <table>
+                    <thead>
+                        <tr><th>সার্ভিস</th><th>উদ্দেশ্য</th><th>ডেটা শেয়ার করা হয়</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td><strong>Groq</strong></td><td>AI প্রক্রিয়াকরণ</td><td>টাইপিং টেক্সট</td></tr>
+                        <tr><td><strong>Cloudflare</strong></td><td>ব্যাকএন্ড হোস্টিং</td><td>রিকোয়েস্ট মেটাডেটা</td></tr>
+                        <tr><td><strong>Google Firebase</strong></td><td>অ্যানালিটিক্স, ক্র্যাশ রিপোর্টিং</td><td>ডিভাইস আইডি, অ্যাপ কার্যকলাপ</td></tr>
+                    </tbody>
+                </table>
+                
+                <p>সমস্ত ডেটা ট্রান্সমিশন <strong>TLS/HTTPS</strong> এনক্রিপশন দ্বারা সুরক্ষিত।</p>
+                
+                <h2>৩. ডেটা নিরাপত্তা</h2>
+                <ul>
+                    <li>সমস্ত ডেটা ট্রান্সমিশন এনক্রিপ্ট করা হয়</li>
+                    <li>আপনার টাইপিং ডেটা শুধুমাত্র AI ফিচার প্রসেসিংয়ের জন্য ক্ষণস্থায়ীভাবে ব্যবহৃত হয়</li>
+                    <li>কোনো ডেটা স্থায়ীভাবে আমাদের সার্ভারে সংরক্ষণ করা হয় না</li>
+                </ul>
+                
+                <h2>৪. ডেটা ডিলিট</h2>
+                <p>আপনার ডেটা ডিলিট করতে চাইলে আমাদের ইমেইল করুন:</p>
+                <div class="contact-box">
+                    <p><strong>📧 ইমেইল:</strong> privacy@likhiapp.com</p>
+                    <p><strong>📝 সাবজেক্ট:</strong> Data Deletion Request</p>
+                    <p><strong>⏱️ সময়সীমা:</strong> আমরা ৩০ দিনের মধ্যে আপনার অনুরোধ প্রক্রিয়া করব।</p>
+                </div>
+                
+                <h2>৫. শিশুদের গোপনীয়তা</h2>
+                <p>এই অ্যাপটি <strong>৩+ বয়সী</strong> ব্যবহারকারীদের জন্য রেট করা হয়েছে। আমরা জেনেশুনে শিশুদের ব্যক্তিগত তথ্য সংগ্রহ করি না।</p>
+                
+                <h2>৬. এই নীতির পরিবর্তন</h2>
+                <p>আমরা সময়ে সময়ে এই গোপনীয়তা নীতি আপডেট করতে পারি। পরিবর্তন হলে এই পৃষ্ঠায় জানিয়ে দেওয়া হবে।</p>
+                
+                <h2>৭. যোগাযোগ</h2>
+                <div class="contact-box">
+                    <p><strong>📧 ইমেইল:</strong> sohan90568@gmail.com</p>
+                    <p><strong>🌐 ওয়েবসাইট:</strong> https://mindcrafttechnologies.netlify.app/</p>
+                </div>
+                
+                <p style="margin-top: 30px; font-size: 14px; color: #888; text-align: center;">
+                    © ২০২৬ লিখি AI কীবোর্ড - সমস্ত অধিকার সংরক্ষিত
+                </p>
+            </div>
+        </div>
+        
+        <!-- English Content -->
+        <div id="lang-en" class="lang-content">
+            <div class="content">
+                <p><span class="badge">📌 Important</span> Likh AI Keyboard respects your privacy. We are committed to protecting your data.</p>
+                
+                <h2>1. Data Collection</h2>
+                <p>Our app collects the following data:</p>
+                
+                <h3>📝 a. Typing Data (Messages)</h3>
+                <p>When you type, your text is sent to our AI servers for processing to provide:</p>
+                <ul>
+                    <li><strong>Translation</strong> — Bengali ↔ English instant translation</li>
+                    <li><strong>Fix</strong> — Spelling and grammar correction</li>
+                    <li><strong>Formalize</strong> — Convert casual to formal language</li>
+                    <li><strong>Summarize</strong> — Shorten long text</li>
+                    <li><strong>Expand</strong> — Elaborate short sentences</li>
+                    <li><strong>Proverbs</strong> — Relevant Bengali proverbs and quotes</li>
+                    <li><strong>Smart Reply</strong> — Generate 3 reply suggestions</li>
+                    <li><strong>Caption</strong> — Create captions</li>
+                </ul>
+                <p>This data is sent to <strong>Groq API</strong> for AI processing. Text is not permanently stored.</p>
+                
+                <h3>🎤 b. Voice Input (Optional)</h3>
+                <p>If you use voice typing, your voice recording is sent to a speech-to-text service. Audio is deleted immediately after processing.</p>
+                
+                <h3>📊 c. App Activity & Analytics</h3>
+                <p>We use <strong>Firebase Analytics</strong> to collect:</p>
+                <ul>
+                    <li>App usage statistics</li>
+                    <li>Feature usage patterns</li>
+                    <li>Crash reports</li>
+                    <li>Device information (Android ID, Advertising ID)</li>
+                </ul>
+                
+                <h3>💰 d. Purchase History</h3>
+                <p>If you purchase AI Pro subscriptions or AI credits, we collect:</p>
+                <ul>
+                    <li>Subscription type (monthly/yearly)</li>
+                    <li>AI credit balance</li>
+                    <li>Subscription expiry date</li>
+                </ul>
+                <p><strong>Important:</strong> Payment processing is handled entirely by Google Play. We do not collect credit card or bank details.</p>
+                
+                <h2>2. Third-Party Data Sharing</h2>
+                <p>We share data with the following third-party services:</p>
+                
+                <table>
+                    <thead>
+                        <tr><th>Service</th><th>Purpose</th><th>Data Shared</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td><strong>Groq</strong></td><td>AI processing</td><td>Typing text</td></tr>
+                        <tr><td><strong>Cloudflare</strong></td><td>Backend hosting</td><td>Request metadata</td></tr>
+                        <tr><td><strong>Google Firebase</strong></td><td>Analytics, crash reporting</td><td>Device IDs, app activity</td></tr>
+                    </tbody>
+                </table>
+                
+                <p>All data transmission is encrypted using <strong>TLS/HTTPS</strong>.</p>
+                
+                <h2>3. Data Security</h2>
+                <ul>
+                    <li>All data transmission is encrypted</li>
+                    <li>Typing data is used ephemerally for AI processing</li>
+                    <li>No data is permanently stored on our servers</li>
+                </ul>
+                
+                <h2>4. Data Deletion</h2>
+                <p>To request deletion of your data, email us at:</p>
+                <div class="contact-box">
+                    <p><strong>📧 Email:</strong> privacy@likhiapp.com</p>
+                    <p><strong>📝 Subject:</strong> Data Deletion Request</p>
+                    <p><strong>⏱️ Timeline:</strong> We will process your request within 30 days.</p>
+                </div>
+                
+                <h2>5. Children's Privacy</h2>
+                <p>This app is rated for users <strong>aged 3+</strong>. We do not knowingly collect personal information from children.</p>
+                
+                <h2>6. Changes to This Policy</h2>
+                <p>We may update this privacy policy from time to time. Changes will be posted on this page.</p>
+                
+                <h2>7. Contact Us</h2>
+                <div class="contact-box">
+                    <p><strong>📧 Email:</strong> sohan90568@gmail.com </p>
+                    <p><strong>🌐 Website:</strong> https://mindcrafttechnologies.netlify.app/</p>
+                </div>
+                
+                <p style="margin-top: 30px; font-size: 14px; color: #888; text-align: center;">
+                    © 2026 Likh AI Keyboard - All Rights Reserved
+                </p>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>লিখি AI কীবোর্ড - বাংলাদেশের প্রথম AI-চালিত বাংলা কীবোর্ড</p>
+            <p>Likh AI Keyboard - Bangladesh's First AI-Powered Bengali Keyboard</p>
+        </div>
+    </div>
+    
+    <script>
+        function showLanguage(lang) {
+            // Hide all language content
+            document.getElementById('lang-bn').classList.remove('active');
+            document.getElementById('lang-en').classList.remove('active');
+            
+            // Show selected language
+            document.getElementById('lang-' + lang).classList.add('active');
+            
+            // Update button active state
+            const buttons = document.querySelectorAll('.lang-btn');
+            buttons.forEach(btn => btn.classList.remove('active'));
+            
+            if (lang === 'bn') {
+                buttons[0].classList.add('active');
+            } else {
+                buttons[1].classList.add('active');
+            }
+        }
+    </script>
 </body>
 </html>
